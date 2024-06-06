@@ -68,7 +68,14 @@ const MyWallet = () => {
                 }
               }}
             />
-            <h2>Income:</h2>
+            <h2
+              onClick={() => {
+                dispatch({ type: "ADD_MONEY", payload: +addCash });
+                setAddCash("");
+              }}
+            >
+              Income:
+            </h2>
 
             <h3>$ {cash}</h3>
           </div>
