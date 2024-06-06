@@ -1,38 +1,207 @@
-.App {
+.wallet {
+  margin-top: 20px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* !start money */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.money {
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  margin: 0 auto;
+  max-width: 700px;
+  padding-bottom: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expenses {
+  border-radius: 20px;
+  background: rgb(232, 6, 6);
+  width: 200px;
+  height: 150px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  gap: 22px;
+  color: #fff;
+  button {
+    padding: 6px 10px;
+    background: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    &:hover {
+      background-color: royalblue;
+      color: #fff;
+      transition: 0.12s ease-in-out;
+    }
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.cash {
+  border-radius: 20px;
+  background: green;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 22px;
+  color: #fff;
+  input {
+    width: 160px;
+    height: 33px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:focus {
+      outline: none;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+/* !end money */
+
+/* !Start inputs */
+
+.inputs {
+  margin: 0 auto;
+  background-color: #ffffff78;
+  backdrop-filter: blur(6px);
+  min-height: 350px;
+  max-width: 600px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  input {
+    max-width: 400px;
+    min-width: 300px;
+    padding: 15px 5px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-size: 18px;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn button {
+  min-width: 300px;
+  border: 1px solid rgba(9, 86, 9, 0.741);
+  padding: 15px 30px;
+  background: rgb(5, 125, 5);
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  &:focus {
+    border: 2px solid rgba(0, 120, 12, 0.682);
   }
-  to {
-    transform: rotate(360deg);
+  &:hover {
+    background: rgb(71, 205, 50);
+    transition: 0.2s ease-in-out;
   }
 }
+
+/* !End inputs */
+
+/* !Product table */
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h5 {
+    color: red;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+}
+.product {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_table {
+  width: 760px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.table_head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  background: royalblue;
+  color: #fff;
+}
+
+.table_body {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  &:hover {
+    background-color: royalblue;
+    transition: 0.3s ease-in-out;
+  }
+}
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  button {
+    background-color: royalblue;
+    color: #fff;
+    margin: 5px;
+    padding: 10px 22px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(157, 58, 251);
+    }
+  }
+
+  .delete {
+    padding: 10px 10px;
+    background-color: rgb(251, 58, 58);
+    &:hover {
+      background-color: rgb(114, 7, 4);
+    }
+  }
+}
+
+/* !Product table END*/
