@@ -116,7 +116,7 @@ const MyWallet = () => {
                   <button
                     onClick={() =>
                       cash < el.productPrice
-                        ? alertError("Не достаточно средств ...")
+                        ? alertError("Недостаточно средств ...")
                         : buyProduct(el.productPrice)
                     }
                   >
